@@ -20,16 +20,51 @@ html {
 body {
     background-image: linear-gradient(135deg, var(--gradA1), var(--gradA2));
     font-family: var(--mainFont);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}  
+
 .main {
+    height: 100%;
     display: grid;
+    grid-template-columns: 1fr;
 }
 
 @media (min-width: 375px) {
     .main {
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: repeat(2, auto);
+        /* grid-template-rows: repeat(4, auto); */
+        grid-template-areas:
+        'logo img'
+        'form img';
+        grid-template-columns: 6fr 4fr;
+        grid-template-rows: 1fr 4fr;
+        
     }
     
+}
+
+.main__image {
+    /* background-image: url(../images/hero-mobile.jpg);
+    width: fit-content; */
+    background: url(../images/hero-mobile.jpg) no-repeat center center/cover;
+}
+
+@media (min-width: 375px) {
+    .main__image {
+        /* height: 10rem;
+        width: 100rem; */
+        /* background: url(../images/hero-desktop.jpg) no-repeat center cover; */
+        grid-area: img;
+        background-image: url(../images/hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* grid-row: 1 / 3; */
+    }
 }
