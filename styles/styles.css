@@ -150,3 +150,14 @@ html, body {
         padding-right: 30%;
     }
 }
+
+
+/** Form Inputs **/
+
+.input__email {
+    border-color: var(--darkGrayishRed);
+}
+
+.input__email:invalid {
+    border-color: red;
+  }
