@@ -154,10 +154,33 @@ html, body {
 
 /** Form Inputs **/
 
-.input__email {
+.input__email:valid {
     border-color: var(--darkGrayishRed);
 }
 
 .input__email:invalid {
     border-color: red;
-  }
+}
+
+/* input[type="email"]:invalid {
+    border: 2px solid red;
+  } */
+
+/* .input__email:invalid {
+    border-color: red;
+  } */
+
+/* .input__container {
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .input__container[data-error] .input__email {
+    border-color: red;
+    color: red;
+}
+
+.input__container[data-error]::after {
+    content: attr(data-error);
+    color: red;
+} */

@@ -29,8 +29,11 @@
       </p>
       <div class="main__form--email">
         <form>
-          <input class="input__email" type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                 title="Please enter a valid email address">
+          <!-- <div class="input__container" data-error="Please provide a valid email">
+            <input class="input__email" type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                 title="Please enter a valid email address" placeholder="Email Address" value="p123">
+          </div> -->
+          <input class="input__email" type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Please provide a valid email')" oninput="this.setCustomValidity('')" placeholder="Email Address">
           <button type="submit">Submit</button>
         </form>        
       </div>
@@ -43,6 +46,6 @@
     </section>
     <div class="main__image"></div>
   </main>
-  
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>
