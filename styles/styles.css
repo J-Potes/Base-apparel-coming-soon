@@ -151,36 +151,69 @@ html, body {
     }
 }
 
+/** Form container **/
 
-/** Form Inputs **/
-
-.input__email:valid {
-    border-color: var(--darkGrayishRed);
-}
-
-.input__email:invalid {
-    border-color: red;
-}
-
-/* input[type="email"]:invalid {
-    border: 2px solid red;
-  } */
-
-/* .input__email:invalid {
-    border-color: red;
-  } */
-
-/* .input__container {
+.form__container {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-} */
-
-/* .input__container[data-error] .input__email {
-    border-color: red;
-    color: red;
+    justify-content: center;
 }
 
-.input__container[data-error]::after {
-    content: attr(data-error);
-    color: red;
-} */
+@media (min-width: 768px) {
+    .form__container {
+        justify-content: unset;
+    }
+}
+
+/** Form class **/
+
+.main__form--email {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 3rem;
+}
+
+@media (min-width: 768px) {
+    .main__form--email {
+        padding: 0;
+        padding-right: 30%;
+    }
+}
+
+
+/** Input email **/
+
+.input__email {
+    width: 100%;
+    height: 4rem;
+    border-style: solid;
+    border-color: var(--desaturatedRed);
+    border-width: 0.1rem;
+    border-radius: 5rem;
+}
+
+@media (min-width: 768px) {
+    .input__email {
+    }
+}
+
+/** Submit **/
+
+.form__submit {
+    position: absolute;
+    right: 3rem;
+    width: 15%;
+    height: 100%;
+    border: none;
+    background-image: linear-gradient(to right, var(--gradB1), var(--gradB2));
+    border-radius: 5rem;
+}
+
+@media (min-width: 768px) {
+    .form__submit {
+        right: 30%;
+        /* width: 15% */
+    }
+}

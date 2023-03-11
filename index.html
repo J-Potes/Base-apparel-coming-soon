@@ -27,15 +27,11 @@
         Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <div class="main__form--email">
-        <form>
-          <!-- <div class="input__container" data-error="Please provide a valid email">
-            <input class="input__email" type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                 title="Please enter a valid email address" placeholder="Email Address" value="p123">
-          </div> -->
+      <div class="form__container">
+        <form class="main__form--email">
           <input class="input__email" type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Please provide a valid email')" oninput="this.setCustomValidity('')" placeholder="Email Address">
-          <button type="submit">Submit</button>
-        </form>        
+          <button class="form__submit" type="submit">Submit</button>
+        </form>
       </div>
       <footer>
         <p class="attribution">
