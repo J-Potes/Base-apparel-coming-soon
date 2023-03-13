@@ -30,7 +30,9 @@
       <div class="form__container">
         <form class="main__form--email">
           <input class="input__email" type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Please provide a valid email')" oninput="this.setCustomValidity('')" placeholder="Email Address">
-          <button class="form__submit" type="submit">Submit</button>
+          <button class="form__submit" type="submit">
+            <img class="form__submit--icon" src="images/icon-arrow.svg" alt="icon arrow">
+          </button>
         </form>
       </div>
       <footer>
