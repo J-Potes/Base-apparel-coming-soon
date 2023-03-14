@@ -162,11 +162,13 @@ html, body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 2.5rem;
 }
 
 @media (min-width: 768px) {
     .form__container {
         justify-content: unset;
+        margin-top: 2rem;
     }
 }
 
@@ -195,7 +197,7 @@ html, body {
     height: 4rem;
     border-style: solid;
     border-color: var(--softpink);
-    border-width: 0.15rem;
+    border-width: 0.2rem;
     border-radius: 5rem;
     padding-left: 2.5rem;
     font-size: 1.3rem;
@@ -204,6 +206,11 @@ html, body {
 .input__email::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--softpink);
     opacity: 1; /* Firefox */
+}
+
+.input__email:focus {
+    border: 0.2rem solid var(--softpink);
+    outline: none;
 }
 
 .error-message {
@@ -235,16 +242,16 @@ html, body {
     }
 }
 
-.input__email:invalid {
+form.submitted .input__email:invalid {
     border-color: var(--softRed);
     border-width: 0.2rem;
 }
 
-.input__email:invalid + .error-icon {
+form.submitted .input__email:invalid + .error-icon {
     visibility: visible;
 }
 
-.input__email:invalid + .error-icon + .error-message{
+form.submitted .input__email:invalid + .error-icon + .error-message{
     visibility: visible;
 }
 
@@ -259,9 +266,9 @@ html, body {
     background-image: linear-gradient(to right, var(--gradB1), var(--gradB2));
     border-radius: 5rem;
 
-    -webkit-box-shadow: 1px 9px 65px -5px rgba(255,158,158,1);
-    -moz-box-shadow: 1px 9px 65px -5px rgba(255,158,158,1);
-    box-shadow: 1px 9px 65px -5px rgba(255,158,158,1);
+    -webkit-box-shadow: -1px 7px 21px 1px rgba(255,158,158,0.6);
+    -moz-box-shadow: -1px 7px 21px 1px rgba(255,158,158,0.6);
+    box-shadow: -1px 7px 21px 1px rgba(255,158,158,0.6);
 
     display: flex;
     justify-content: center;
@@ -280,6 +287,11 @@ html, body {
 
 .form__submit:hover {
     background-image: linear-gradient(to right, var(--gradC1), var(--gradC2));
+    cursor: pointer;
+
+    -webkit-box-shadow: -1px 7px 21px 1px rgba(235, 129, 129, 0.7);
+    -moz-box-shadow: -1px 7px 21px 1px rgba(235, 129, 129, 0.7);
+    box-shadow: -1px 7px 21px 1px rgba(235, 129, 129, 0.7);
 }
 
 /** Attribution **/
