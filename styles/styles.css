@@ -199,19 +199,54 @@ html, body {
     border-radius: 5rem;
     padding-left: 2.5rem;
     font-size: 1.3rem;
-    /* color: var(--softpink); */
-
-}
-
-@media (min-width: 768px) {
-    .input__email {
-    }
 }
 
 .input__email::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--softpink);
     opacity: 1; /* Firefox */
-  }
+}
+
+.error-message {
+    position: absolute;
+    color: var(--softRed);
+    font-size: 1.2rem;
+    bottom: -3.5rem;
+    left: 5.5rem;
+    visibility: hidden;
+}
+
+@media (min-width: 768px) {
+    .error-message {
+        left: 2.5rem;
+    }
+}
+
+.error-icon {
+    position: absolute;
+    right: calc(17% + 3rem);
+    height: 1.7rem;
+    align-self: center;
+    visibility: hidden;
+}
+
+@media (min-width: 768px) {
+    .error-icon {
+        right: 47%;
+    }
+}
+
+.input__email:invalid {
+    border-color: var(--softRed);
+    border-width: 0.2rem;
+}
+
+.input__email:invalid + .error-icon {
+    visibility: visible;
+}
+
+.input__email:invalid + .error-icon + .error-message{
+    visibility: visible;
+}
 
 /** Submit **/
 
@@ -236,7 +271,6 @@ html, body {
 @media (min-width: 768px) {
     .form__submit {
         right: 30%;
-        /* width: 15% */
     }
 }
 
@@ -248,12 +282,10 @@ html, body {
     background-image: linear-gradient(to right, var(--gradC1), var(--gradC2));
 }
 
-
-
 /** Attribution **/
 
 .attribution {
-    margin-top: 3rem;
+    margin-top: 7rem;
     color: var(--darkGrayishRed);
     opacity: 0.7;
 }
