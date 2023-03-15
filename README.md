@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-page-using-css-grid-and-flexbox-UZ39r6-TUw](https://www.frontendmentor.io/solutions/responsive-page-using-css-grid-and-flexbox-UZ39r6-TUw)
 - Live Site URL: [https://base-apparel-exercise.netlify.app/](https://base-apparel-exercise.netlify.app/)
 
 ## My process
