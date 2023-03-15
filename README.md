@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-
+![Screenshot 2023-03-14 at 20-19-18 Frontend Mentor Base Apparel coming soon page](https://user-images.githubusercontent.com/119544731/225179531-e69dbc91-20ba-4de1-aa75-9988f4a02796.png)
 
 ### Links
 
